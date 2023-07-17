@@ -9,7 +9,7 @@ def write_file(array, mode):
     for notes in array:
         file.write(Note.Note.to_string(notes))
         file.write('\n')
-    file.close
+    file.close()
 
 
 def read_file():
@@ -23,6 +23,6 @@ def read_file():
                 id=split_n[0], title=split_n[1], body=split_n[2], date=split_n[3])
             array.append(note)
     except Exception:
-        print('>>>Сохраненных записей не найдено<<<')
+        print('>>> Записанных заметок не найдено! <<<')
     finally:
         return array
